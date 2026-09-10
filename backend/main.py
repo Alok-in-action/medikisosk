@@ -382,7 +382,7 @@ def get_doctor_sessions(doctor_id: int, db: DBSession = Depends(get_db)):
     """Return all sessions assigned to a doctor, with their summary if available."""
     sessions = (
         db.query(PatientSession)
-        .filter(PatientSession.doctor_id == doctor_id)
+        .filter((PatientSession.doctor_id == doctor_id) | (PatientSession.doctor_id == None))
         .order_by(PatientSession.created_at.desc())
         .all()
     )
