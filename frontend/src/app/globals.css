@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  
+  --color-border: var(--border);
+  
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-atkinson-hyperlegible), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  
+  --primary: #0891B2;
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: #22D3EE;
+  --secondary-foreground: #0F172A;
+  
+  --accent: #059669;
+  --accent-foreground: #FFFFFF;
+  
+  --card: #FFFFFF;
+  --card-foreground: #164E63;
+  
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  
+  --border: #E2E8F0;
+  
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --ring: #0891B2;
+
+  /* Emil Kowalski's recommended easings */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.dark {
+  --background: #020817;
+  --foreground: #F8FAFC;
+  
+  --primary: #06B6D4;
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: #0891B2;
+  --secondary-foreground: #F8FAFC;
+  
+  --accent: #10B981;
+  --accent-foreground: #020817;
+  
+  --card: #0F172A;
+  --card-foreground: #F8FAFC;
+  
+  --muted: #1E293B;
+  --muted-foreground: #94A3B8;
+  
+  --border: #1E293B;
+  
+  --destructive: #7F1D1D;
+  --destructive-foreground: #F8FAFC;
+
+  --ring: #06B6D4;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Modern utility replacements for the old Neumorphic classes */
+@layer utilities {
+  .neu-card {
+    background: var(--color-card);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+    border: 1px solid var(--color-border);
+  }
+  
+  .neu-card-white {
+    background: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--color-border);
+  }
+
+  .neu-flat {
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--color-border);
+    transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out), background-color 160ms var(--ease-out);
+    cursor: pointer;
+  }
+
+  .neu-flat:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .neu-flat:active {
+    transform: scale(0.97);
+  }
+
+  .neu-pressed {
+    background: var(--color-primary);
+    color: var(--color-primary-foreground) !important;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
