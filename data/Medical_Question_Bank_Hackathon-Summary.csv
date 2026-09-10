@@ -1,0 +1,15 @@
+Summary — Questions by Complaint Category,,
+Complaint Category,No. of Questions,Key Topics Covered
+General / Triage,12,"Demographics, chronic illness, medications, substance history"
+Pain (Universal),8,"Location, severity, character, modifying factors, night pain"
+Fever,10,"Duration, pattern, chills, sweating, rash, travel, clusters"
+Headache,9,"Location, duration, aura, nausea, BP, eye-strain, sinusitis"
+Cough / Respiratory,10,"Duration, sputum, haemoptysis, breathlessness, TB contact, biomass"
+Abdomen,11,"Site, food relation, vomiting, diarrhoea, blood in stool, jaundice"
+Urinary,7,"Burning, frequency, blood, retention, diabetes linkage"
+Skin,8,"Distribution, itch, spread, blisters, contact, scabies, vitiligo"
+Women's Health,7,"Periods, LMP, pregnancy, discharge, obstetric history"
+Mental Health,6,"Mood, depression, anxiety, sleep, stress, suicidal ideation"
+Paediatric,8,"Age/weight, vaccination, feeding, dehydration, fits, development"
+Elderly,4,"Falls, memory, polypharmacy, social support"
+TOTAL,100,100 questions across 12 categories

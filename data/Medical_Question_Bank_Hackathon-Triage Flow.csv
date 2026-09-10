@@ -1,0 +1,10 @@
+Recommended Question Flow — Triage Logic for Software,,,
+Step,Action,Example,Software Logic
+1,Ask chief complaint (open-ended),What is your main problem today?,Route to specific module based on keyword
+2,Collect vitals if device-linked,"BP, SpO2, Temp, Heart Rate",Flag abnormal values as red alerts
+3,Run General Triage Qs (1–12),"Age, sex, duration, medicines, allergies",Build patient profile
+4,Run Complaint-Specific Qs,Fever → Qs 21–30; Cough → Qs 40–49,Show only relevant section
+5,Apply Red Flag Screening,"Blood in stool/sputum, chest pain, fits",Escalate to doctor immediately
+6,India-specific screening triggers,Cough >2wk → TB; Fever + travel → Malaria,Add warning banner
+7,Paediatric / Female / Elderly branch,Age <12 → Paediatric; Female → Women's health,Conditional logic in software
+8,Summarise and handoff to doctor,Generate structured summary card,Include severity score

@@ -1,0 +1,10 @@
+.env
+backend/.env
+venv/
+__pycache__/
+*.db
+*.mp3
+*.wav
+node_modules/
+.next/
+backend/tmp/

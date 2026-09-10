@@ -1,0 +1,115 @@
+🏥  Medical Intake Question Bank — Indian Patients,,,,,,
+Hackathon Task 3 · Prepared questions for common patient complaints · India-contextualised,,,,,,
+#,Complaint Category,Question (English),Hindi / Hinglish Version,Question Type,Answer Options / Scale,Indian Context Note
+  GENERAL TRIAGE,,,,,,
+1,General,What is your main problem today?,Aaj aapki sabse badi pareshani kya hai?,Open-ended,Free text,Always first question
+2,General,How long have you had this problem?,Yeh pareshani kab se hai?,Open-ended,Free text / Days-Weeks-Months,Duration is critical for triage
+3,General,Did this start suddenly or slowly?,Yeh achanak aaya ya dheere dheere?,Single choice,Sudden / Gradually,Helps differentiate acute vs chronic
+4,General,"Is this the first time, or has it happened before?",Pehle bhi aisa hua hai?,Single choice,First time / Repeated,Important for recurrence pattern
+5,General,Are you taking any medicines currently?,Kya aap koi dawai le rahe hain abhi?,Yes/No + detail,Yes (list) / No,Include Ayurvedic/homeopathic/OTC
+6,General,Do you have any known allergies to medicine?,Koi dawai se allergy hai aapko?,Yes/No + detail,Yes (which) / No / Don't know,
+7,General,"Do you have any chronic illness (diabetes, BP, etc.)?","Koi purani bimari hai? (Sugar, BP, dil ki bimari?)",Multi-select,Diabetes / Hypertension / Heart / Asthma / None / Other,Use local terms: Sugar = Diabetes
+8,General,Have you been admitted to hospital before for this?,Pehle kabhi hospital mein admit hue hain iske liye?,Yes/No,Yes / No,
+9,General,What is your age?,Aapki umar kitni hai?,Numeric,Years,
+10,General,What is your gender?,Aap kya hain?,Single choice,Male / Female / Other,
+11,General,Do you smoke or consume tobacco?,"Beedi, cigarette, gutkha, pan masala lete hain?",Single choice,Yes-daily / Occasionally / No,Include gutkha/khaini specific to India
+12,General,Do you consume alcohol?,Sharaab peete hain?,Single choice,Yes-daily / Occasionally / No,May underreport; ask sensitively
+  PAIN (Universal for any pain complaint),,,,,,
+13,Pain,Where exactly is the pain?,Dard kahan ho raha hai? (Angulee se batayein),Body map / Open,Body region selection,Offer body diagram if possible
+14,Pain,Does the pain spread anywhere else?,Dard kahin aur bhi jaata hai?,Yes/No + location,Yes (where) / No,"E.g., chest pain radiating to left arm"
+15,Pain,How severe is the pain on a scale of 0–10?,"0 se 10 mein dard kitna hai? (0=bilkul nahi, 10=bahut zyada)",Numeric scale,0–10,Use visual pain scale for illiteracy
+16,Pain,What does the pain feel like?,Dard kaisa lagta hai?,Multi-select,Throbbing/Burning/Stabbing/Pressure/Dull ache/Sharp/Cramping,
+17,Pain,Is the pain constant or does it come and go?,Dard lagaataar rehta hai ya aata-jaata hai?,Single choice,Constant / Intermittent,
+18,Pain,What makes the pain worse?,Kya karne se dard badhta hai?,Multi-select,Movement / Eating / Lying down / Pressure / Cold / Heat / Nothing,
+19,Pain,What gives you relief from the pain?,Kya karne se aaram milta hai?,Multi-select,Rest / Medicine / Heat/Seka / Cold / Eating / Nothing,Seka (warm fomentation) is common in India
+20,Pain,Does the pain wake you up at night?,Raat ko neend mein bhi dard hota hai?,Yes/No,Yes / No,Night pain = serious red flag
+  FEVER,,,,,,
+21,Fever,Since when do you have fever?,Bukhar kab se hai?,Duration,Hours / Days,
+22,Fever,How high was the highest temperature?,Sabse zyada temperature kitna tha?,Numeric,°F or °C,Many Indians use °F; offer both
+23,Fever,Is the fever continuous or does it come and go?,Bukhar lagaataar rehta hai ya chadta-utarta hai?,Single choice,Continuous / Intermittent / Evening spikes,Evening spikes → TB suspicion
+24,Fever,Do you have chills or body shaking with fever?,Thand lagti hai ya kaampna hota hai bukhar ke saath?,Yes/No,Yes / No,Rigors suggest malaria/sepsis
+25,Fever,Is there sweating after the fever breaks?,Bukhar utarne ke baad bahut paseena aata hai?,Yes/No,Yes / No,Classic malaria pattern
+26,Fever,Do you have a rash anywhere on the body?,Shareer par koi daane ya laal dhabbey hain?,Yes/No + location,Yes (where) / No,Dengue / Typhoid / Viral
+27,Fever,Have you travelled recently to a forested or rural area?,Haal mein jungle ya gaon gaye the?,Yes/No,Yes / No,Malaria/vector-borne disease screening
+28,Fever,Is there anyone else at home with similar fever?,Ghar mein kisi aur ko bhi aisa bukhar hai?,Yes/No,Yes / No,Cluster = dengue / typhoid outbreak
+29,Fever,Have you had dengue or malaria before?,Pehle kabhi dengue ya malaria hua hai?,Yes/No,Yes / No,
+30,Fever,Do you have pain behind your eyes?,Aankhon ke peechhe dard hota hai?,Yes/No,Yes / No,Characteristic of dengue
+  HEADACHE,,,,,,
+31,Headache,Where in the head is the pain?,Sar mein dard kahan hota hai?,Single choice,Front / Back / Both sides / One side / Whole head,
+32,Headache,For how long does each headache episode last?,Ek baar mein kitni der tak dard rehta hai?,Duration,Minutes / Hours / Days,
+33,Headache,Do you see flashing lights or blurred vision before headache?,Dard se pehle aankhon ke aage chamak ya dhundla dikhai deta hai?,Yes/No,Yes / No,Migraine aura screening
+34,Headache,Is the headache with nausea or vomiting?,Dard ke saath ji machlaata hai ya ulti hoti hai?,Yes/No,Yes / No,Migraine / raised ICP
+35,Headache,Does light or noise make it worse?,Tej roshni ya awaaz se dard badhta hai?,Yes/No,Yes / No,Photophobia / phonophobia = migraine
+36,Headache,Do you have high BP (known)?,Aapko pehle se high BP ki bimari hai?,Yes/No,Yes / No / Don't know,Hypertensive headache common
+37,Headache,Do you strain your eyes for long hours (phone/reading)?,Lambi der tak mobile ya kitaab dekhtey hain?,Yes/No,Yes / No,Eye-strain headache very common in students
+38,Headache,Is the headache worse in the morning?,Subah uthne par dard zyada hota hai?,Yes/No,Yes / No,Worse AM → raised ICP / sinusitis
+39,Headache,Do you have blocked or runny nose with headache?,Sar dard ke saath naak band rehti hai ya behti hai?,Yes/No,Yes / No,Sinusitis
+  COUGH / RESPIRATORY,,,,,,
+40,Cough,Since how long do you have cough?,Khansi kab se hai?,Duration,Days / Weeks / Months,Cough > 2 weeks → TB screen in India
+41,Cough,Is the cough dry or with phlegm?,Khansi sukhi hai ya balgam aata hai?,Single choice,Dry / With phlegm,
+42,Cough,What colour is the phlegm?,Balgam ka rang kaisa hai?,Single choice,White / Yellow / Green / Brown / Blood-tinged / Red,"Blood → hemoptysis, urgent"
+43,Cough,Have you coughed up blood?,Khansi mein khoon aaya hai kabhi?,Yes/No,Yes / No,Red flag for TB / malignancy
+44,Cough,Do you have breathlessness?,Saanss lene mein takleef hoti hai?,Yes/No + severity,At rest / On exertion / Climbing stairs / No,
+45,Cough,Is there a whistling sound when you breathe?,Saanss lete waqt seeti jaisi awaaz aati hai?,Yes/No,Yes / No,Wheeze → Asthma / COPD
+46,Cough,Do you have chest pain with cough?,Khansi ke saath seene mein dard hota hai?,Yes/No,Yes / No,Pleuritis / Pneumonia
+47,Cough,Have you lost weight recently without trying?,Bina koshish ke wazan kam hua hai haal mein?,Yes/No,Yes / No,TB / Malignancy red flag
+48,Cough,Does anyone at home have TB or prolonged cough?,Ghar mein kisi ko TB hai ya lambi khansi hai?,Yes/No,Yes / No,TB contact history — very relevant in India
+49,Cough,Do you cook indoors on a wood/dung-cake stove?,Ghar mein chulhe par khana banate hain (lakdi/upla)?,Yes/No,Yes / No,Biomass smoke exposure — India-specific
+  STOMACH / ABDOMINAL COMPLAINTS,,,,,,
+50,Abdomen,Where is the stomach pain?,Pet mein dard kahan hota hai?,Single choice,Upper centre / Lower centre / Right side / Left side / Around navel / Whole abdomen,
+51,Abdomen,Is the pain related to eating?,Khaane se dard ka koi sambandh hai?,Single choice,Better after eating / Worse after eating / No relation,Peptic ulcer vs. other causes
+52,Abdomen,Do you have nausea or vomiting?,Ji machlaata hai ya ulti hoti hai?,Yes/No,Yes / No,
+53,Abdomen,How many times did you vomit today?,Aaj kitni baar ulti hui?,Numeric,Number,
+54,Abdomen,Do you have loose motions / diarrhoea?,Dast aa rahe hain?,Yes/No + frequency,Yes (how many times/day) / No,
+55,Abdomen,Is there blood or mucus in the stool?,Potty mein khoon ya aaon aata hai?,Yes/No,Yes (which) / No,
+56,Abdomen,Are you constipated?,Potty sahi se nahi hoti? (Qabz),Yes/No,Yes / No,Qabz is widely understood term
+57,Abdomen,Have you eaten outside food / street food recently?,Haal mein bahar ka khaana khaya tha?,Yes/No,Yes / No,"Food poisoning, street food common in India"
+58,Abdomen,Do you have heartburn / acidity?,Seene ya gale mein jalan hoti hai? (Acidity),Yes/No,Yes / No,Very common complaint in India
+59,Abdomen,Has there been any yellow tinge to eyes or skin?,Aankhein ya skin peeli ho gayi hai?,Yes/No,Yes / No,Jaundice screen — hepatitis common
+60,Abdomen,Do you have swelling in the abdomen?,Pet mein sujan / phoolna lagta hai?,Yes/No,Yes / No,Ascites / distension
+  URINARY COMPLAINTS,,,,,,
+61,Urinary,Do you have pain or burning during urination?,Peshab karte waqt dard ya jalan hoti hai?,Yes/No,Yes / No,"UTI — very common, esp. women"
+62,Urinary,How frequently are you urinating?,Ek din mein kitni baar peshab aata hai?,Numeric,Times/day,
+63,Urinary,Is there blood in the urine?,Peshab mein khoon aata hai?,Yes/No,Yes / No,Red flag
+64,Urinary,Is there difficulty starting urination?,Peshab shuru karne mein takleef hoti hai?,Yes/No,Yes / No,BPH in elderly men
+65,Urinary,Do you feel your bladder is not completely emptied?,Peshab ke baad bhi lagta hai ki pura nahi hua?,Yes/No,Yes / No,Retention / BPH
+66,Urinary,Do you have back/flank pain with urinary symptoms?,Peshab ki takleef ke saath kamar ya peeth mein dard hai?,Yes/No,Yes / No,Pyelonephritis / renal calculi
+67,Urinary,Are you diabetic? (Diabetes affects kidney and urine),Aapko sugar ki bimari hai?,Yes/No,Yes / No / Don't know,Diabetic nephropathy very common in India
+  SKIN COMPLAINTS,,,,,,
+68,Skin,Where is the skin problem on the body?,Shareer par problem kahan hai?,Body map,Body region,
+69,Skin,Is there itching?,Khujli hoti hai?,Yes/No + severity,Yes (mild/severe) / No,
+70,Skin,Is it spreading to other parts?,Kya yeh aaage phail raha hai?,Yes/No,Yes / No,
+71,Skin,Are there blisters or open wounds?,Chhale hain ya ghav hai?,Yes/No,Yes / No,
+72,Skin,"Did you use any new soap, cream or detergent recently?","Haal mein koi naya sabun, cream ya kapde dho ne ka powder use kiya?",Yes/No,Yes / No,Contact dermatitis common
+73,Skin,Do others at home have the same skin problem?,Ghar mein kisi aur ko bhi aisi problem hai?,Yes/No,Yes / No,"Scabies — highly contagious, common in India"
+74,Skin,Are there white patches on the skin?,Skin par safed dabbe hain?,Yes/No,Yes / No,Vitiligo / Leprosy screening — India-specific
+75,Skin,Do you work in a field / construction / water for long hours?,"Khet, nirman kaam, ya paani mein ghante kaam karte hain?",Yes/No,Yes / No,Occupational skin disease
+  WOMEN'S HEALTH (show only if patient is female),,,,,,
+76,Women's Health,Are your periods regular?,Mahina (MC) sahi samay par aata hai?,Single choice,Regular / Irregular / Stopped (menopause),
+77,Women's Health,Date of last menstrual period?,Aakhri mahine ki taareekh kya thi?,Date,DD/MM/YYYY,Essential for any female of reproductive age
+78,Women's Health,Is there heavy bleeding during periods?,Mahine mein zyada khoon aata hai?,Yes/No,Yes / No,
+79,Women's Health,Is there pain during periods?,Mahine mein bahut dard hota hai?,Yes/No + scale,Yes (0-10) / No,Dysmenorrhea
+80,Women's Health,Is there any chance you could be pregnant?,Kya aap pregnant ho sakti hain?,Single choice,Yes / No / Not sure,Critical before any X-ray or medication
+81,Women's Health,Do you have any unusual discharge?,Koi andar se safed ya ajeeb discharge aata hai?,Yes/No + description,Yes (colour/smell) / No,Vaginal infection screening
+82,Women's Health,Have you had any pregnancies? Any complications?,Pehle pregnancy hui hai? Koi takleef?,Open,Number of pregnancies / Any issues,Obstetric history
+  MENTAL HEALTH / EMOTIONAL WELLBEING (ask sensitively),,,,,,
+83,Mental Health,How is your mood / mental state lately?,Aajkal aap kaisa feel karte hain andar se?,Open-ended,Free text,Avoid direct 'mental illness' label — stigma in India
+84,Mental Health,Are you feeling very sad or hopeless?,Bahut udaas ya nirasha feel hoti hai?,Yes/No,Yes / No,Depression screen
+85,Mental Health,Is there a lot of worry or tension in your mind?,Bahut zyada chinta ya tension rehti hai?,Yes/No + scale,Yes (0-10) / No,Anxiety
+86,Mental Health,Has your sleep been affected?,Neend sahi aati hai?,Single choice,Yes-fine / Less / Too much / Very disturbed,
+87,Mental Health,Is there stress at home or work?,Ghar ya kaam par bahut tension hai?,Yes/No,Yes / No,Psychosocial context important
+88,Mental Health,Have you ever thought of harming yourself?,Kya kabhi aapne apne aap ko hurt karne ka socha?,Yes/No,Yes / No,Suicidal ideation — handle with extreme care
+  PAEDIATRIC — ask PARENT or caregiver (for child patients),,,,,,
+89,Paediatric,What is the child's age and weight?,Bachche ki umar aur wazan kitna hai?,Numeric,Years / Kg,
+90,Paediatric,Is the child vaccinated as per schedule?,Bacche ke sabhi tike lage hue hain?,Single choice,Yes / Partial / No / Don't know,Immunisation status — critical in India
+91,Paediatric,Is the child eating and drinking normally?,Bachcha khana-paani theek se le raha hai?,Yes/No,Yes / No,Dehydration risk
+92,Paediatric,Has the child had loose motions or vomiting?,Bachche ko dast ya ulti ho rahi hai?,Yes/No + frequency,Yes (count) / No,
+93,Paediatric,Is the child passing urine normally?,Bachcha peshab kar raha hai?,Yes/No,Yes / No,Hydration marker
+94,Paediatric,Any convulsions / fits?,Bachche ko mirgi ke jhatke aaye hain?,Yes/No,Yes / No,Febrile seizure / epilepsy
+95,Paediatric,Was the child born full-term and normally?,Bachcha poore mahine mein aur seedhe janma?,Yes/No,Yes / No / Premature,Neonatal history
+96,Paediatric,Is the child going to school? Any developmental concerns?,Bachcha school jaata hai? Koi pichhadapan dikh raha hai?,Yes/No,Yes / No,Developmental screening
+  ELDERLY PATIENTS (60+),,,,,,
+97,Elderly,Do you have any falls recently?,Haal mein girne ki koi ghatna hui?,Yes/No,Yes / No,Fall risk assessment
+98,Elderly,Do you forget things more than before?,Pehle se zyada bhulne lagey hain?,Yes/No + severity,Yes (mild/severe) / No,Dementia screen
+99,Elderly,How many medicines do you take daily?,Roz kitni dawaiyan lete hain?,Numeric,Number,Polypharmacy common in elderly India
+100,Elderly,Do you live alone or with family?,Akele rehte hain ya parivaar ke saath?,Single choice,Alone / With family / With caretaker,Social support assessment

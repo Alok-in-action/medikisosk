@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+pydub
+
+requests
+sqlalchemy
+
+python-dotenv
+pyjwt
