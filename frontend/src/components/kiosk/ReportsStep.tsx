@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Upload, X, FileText, CheckCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { API_BASE_URL, apiFetch } from "@/lib/api";
+import { API_BASE_URL } from "@/lib/api";
 
 export default function ReportsStep({ language, onNext }: { language: string, onNext: () => void }) {
   const [files, setFiles] = useState<File[]>([]);
@@ -31,10 +31,10 @@ export default function ReportsStep({ language, onNext }: { language: string, on
       files.forEach((f) => formData.append("files", f));
       
       try {
-        await apiFetch(`/session/${sessionId}/upload-reports`, {
+        await fetch(`${API_BASE_URL}/session/${sessionId}/upload-reports`, {
           method: "POST",
           body: formData,
-        }, 60000); // Wait up to 60s for large uploads + OCR
+        });
       } catch (e) {
         console.error("Upload failed", e);
       }
@@ -42,10 +42,10 @@ export default function ReportsStep({ language, onNext }: { language: string, on
     
     // Complete the session
     try {
-      await apiFetch(`/session/${sessionId}/complete`, {
+      await fetch(`${API_BASE_URL}/session/${sessionId}/complete`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-      }, 60000); // Wait up to 60s for summary generation
+      });
     } catch (e) {
       console.error("Failed to complete session", e);
     }

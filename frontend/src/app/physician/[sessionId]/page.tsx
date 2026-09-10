@@ -337,9 +337,22 @@ export default function PatientProfilePage() {
                   </div>
                 )}
 
+                {summary.report_extractions.raw_text && (
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <FileText className="text-orange-500" size={18} />
+                      <h4 className="font-semibold text-[var(--foreground)] text-sm">Raw Assessment</h4>
+                    </div>
+                    <div className="p-4 bg-[var(--color-background)] border border-[var(--color-border)] rounded-lg text-sm text-[var(--foreground)] whitespace-pre-wrap">
+                      {summary.report_extractions.raw_text}
+                    </div>
+                  </div>
+                )}
+
                 {summary.report_extractions.diagnoses.length === 0 && 
                  summary.report_extractions.medications.length === 0 && 
-                 summary.report_extractions.investigation_values.length === 0 && (
+                 summary.report_extractions.investigation_values.length === 0 &&
+                 !summary.report_extractions.raw_text && (
                   <p className="text-[var(--color-muted-foreground)] text-sm italic">
                     No extractions could be found or no reports were uploaded.
                   </p>

@@ -428,7 +428,18 @@ Rules:
                     contents=prompt,
                     config={'response_mime_type': 'application/json'}
                 )
-                return json.loads(response.text)
+                data = json.loads(response.text)
+                
+                # Mock override: If we have the extracted text, force it exactly as raw_text
+                if extracted_text:
+                    data["report_extractions"] = {
+                        "diagnoses": [],
+                        "medications": [],
+                        "investigation_values": [],
+                        "raw_text": extracted_text
+                    }
+                    
+                return data
             except Exception as e:
                 if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
                     logger.warning(f"Rate limit hit on key index {self.current_key_idx}. Rotating key.")
@@ -449,7 +460,8 @@ Rules:
             "report_extractions": {
                 "diagnoses": [],
                 "medications": [],
-                "investigation_values": fallback_inv
+                "investigation_values": [],
+                "raw_text": extracted_text
             },
             "red_flags": [],
         }

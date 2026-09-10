@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./medikiosk.db")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:Alokkhamora@db.wtufljxwlkvovjbgqgbo.supabase.co:5432/postgres")
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ChevronLeft, User, Calendar, Phone, Activity, Stethoscope, Check } from "lucide-react";
-import { API_BASE_URL, apiFetch } from "@/lib/api";
+import { API_BASE_URL } from "@/lib/api";
 
 const STEPS = [
   { id: "name", icon: User },
@@ -31,7 +31,8 @@ export default function PatientDetailsStep({ onNext, onBack, language }: { onNex
   const isHi = language === "hi";
 
   useEffect(() => {
-    apiFetch('/doctors')
+    fetch(`${API_BASE_URL}/doctors`)
+      .then((res) => res.json())
       .then((data) => setDoctors(data))
       .catch((err) => console.error("Failed to fetch doctors:", err));
   }, []);
@@ -41,7 +42,7 @@ export default function PatientDetailsStep({ onNext, onBack, language }: { onNex
     setError("");
 
     try {
-      const data = await apiFetch('/session', {
+      const response = await fetch(`${API_BASE_URL}/session`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -55,6 +56,9 @@ export default function PatientDetailsStep({ onNext, onBack, language }: { onNex
         }),
       });
 
+      if (!response.ok) throw new Error("Failed to create session");
+
+      const data = await response.json();
       localStorage.setItem("sessionId", data.session_id);
       onNext();
     } catch (err) {

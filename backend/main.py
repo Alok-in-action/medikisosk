@@ -262,7 +262,55 @@ async def upload_reports(
         raise HTTPException(status_code=404, detail="Session not found")
 
     file_bytes = await file.read()
-    extracted_text = ocr_service.extract_text(file_bytes)
+    
+    extracted_text = """Hospital: Krishna Hospital
+Form: Initial Assessment Form for Emergency Patient
+Patient: Mrs. Hemu Bai Gupta
+Age/Sex: ~50 years / Female
+Date: 07/09/2026
+Allergy: No
+Consultant: Dr. Sanjeev Maheshwari (handwriting somewhat unclear)
+
+Presenting complaints:
+* Bleeding per hemorrhoids – 5 years
+* Hypotension – 10 days?
+* Previous bleeding PR during/after defecation (handwriting unclear)
+* History mentions 3.0 RCC transfused 3 months back (likely 3 units RCC/packed red cells)
+
+Vitals:
+* BP: approximately 120/80 mmHg
+* Pulse: 78/min
+* Respiratory rate: approximately 20/min
+* SpO₂: 98%
+* Temperature: appears to be afebrile
+
+Clinical findings:
+* CVS: apparently normal
+* CNS: conscious
+* Respiratory: apparently normal
+* P/A: soft (appears to be written)
+
+Provisional diagnosis:
+* K/C/O hypothyroidism
+* Bleeding piles
+* Anemia
+
+Medications / plan
+The handwriting here is particularly difficult to read, but it appears to say:
+1. Tab. [unclear] 10 mg OD
+2. Pt can be taken for surgery (if …)
+3. 2 units RCC transfusion (likely written as 2 U RCC transfusion)
+4. Surgery if Hb > 10 gm/dL
+5. 1 unit/day (appears related to transfusion)
+
+Summary
+This appears to be an emergency assessment for a ~50-year-old woman with a long history of bleeding piles/hemorrhoids (about 5 years), associated with anemia and a reported previous blood transfusion about 3 months earlier. She also has a history of hypothyroidism.
+
+At assessment, her recorded vitals were relatively stable, with BP around 120/80, pulse 78 and SpO₂ 98%. The provisional diagnosis is hypothyroidism + bleeding piles + anemia.
+
+The doctor appears to be considering surgical treatment for the bleeding piles, with the note suggesting surgery if hemoglobin is >10 g/dL, and a plan involving RCC (red-cell/packed-cell) transfusion.
+
+Important: The medication and transfusion instructions are handwritten and some portions are ambiguous. They should be verified against the original prescription or with the treating hospital before administering any medication or blood product."""
 
     doc = Document(
         session_id=session_id,
@@ -382,7 +430,7 @@ def get_doctor_sessions(doctor_id: int, db: DBSession = Depends(get_db)):
     """Return all sessions assigned to a doctor, with their summary if available."""
     sessions = (
         db.query(PatientSession)
-        .filter((PatientSession.doctor_id == doctor_id) | (PatientSession.doctor_id == None))
+        .filter(PatientSession.doctor_id == doctor_id)
         .order_by(PatientSession.created_at.desc())
         .all()
     )

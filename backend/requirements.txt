@@ -2,13 +2,9 @@ fastapi
 uvicorn
 python-multipart
 pydub
+
 requests
 sqlalchemy
+
 python-dotenv
 pyjwt
-psycopg2-binary
-google-genai
-google-cloud-vision
-supabase
-pytesseract
-gTTS

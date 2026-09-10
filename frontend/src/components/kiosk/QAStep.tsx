@@ -30,6 +30,19 @@ export default function QAStep({ language, onNext }: { language: string, onNext:
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const isMountedRef = useRef(true);
+  const ttsCounterRef = useRef(0);
+
+  useEffect(() => {
+    isMountedRef.current = true;
+    return () => {
+      isMountedRef.current = false;
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
+    };
+  }, []);
 
   const isHindi = language === "hi";
 
@@ -75,7 +88,12 @@ export default function QAStep({ language, onNext }: { language: string, onNext:
   }, [language, onNext]);
 
   const playTTS = async (text: string, lang: string) => {
+    const currentCounter = ++ttsCounterRef.current;
     try {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
       const res = await fetch(`${API_BASE_URL}/tts`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -83,8 +101,12 @@ export default function QAStep({ language, onNext }: { language: string, onNext:
       });
       if (!res.ok) return;
       const blob = await res.blob();
+      
+      if (!isMountedRef.current || currentCounter !== ttsCounterRef.current) return;
+      
       const url = URL.createObjectURL(blob);
       const audio = new Audio(url);
+      audioRef.current = audio;
       audio.play().catch(() => {});
       audio.onended = () => URL.revokeObjectURL(url);
     } catch {}

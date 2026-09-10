@@ -30,7 +30,6 @@ export async function apiFetch<T = any>(
     ...options,
     signal: controller.signal,
     headers: {
-      "Bypass-Tunnel-Reminder": "true",
       ...options.headers,
     }
   };
